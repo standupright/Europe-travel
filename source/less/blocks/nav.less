@@ -1,0 +1,125 @@
+.nav__toggle {
+  display: none;
+}
+
+.nav__list {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.nav__item {
+  margin-right: 40px;
+
+  &:last-of-type {
+    margin-right: 53px;
+  }
+}
+
+.nav__link {
+  font-family: "Montserrat", "Arial", sans-serif;
+  color: @darkest-blue;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+
+  &:hover,
+  &:focus {
+    color: @ginger;
+  }
+}
+
+@media (max-width: 1023px) {
+  .nav {
+    width: 320px;
+    height: 568px;
+    position: absolute;
+    top: 0px;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-end;
+
+    &--nojs {
+      position: static;
+    }
+
+    &--closed {
+      height: 50px;
+    }
+
+    &--closed .nav__list{
+      display: none;
+    }
+
+    &--closed .nav__toggle {
+      display: block;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-image: url("/img/icon-burger.svg");
+      background-color: @ginger;
+      border: none;
+      outline: none;
+      width: 72px;
+      height: 50px;
+    }
+
+    &--opened .nav__toggle{
+      display: block;
+      margin-top: 20px;
+      margin-right: 20px;
+      width: 30px;
+      height: 30px;
+      background-color: @white;
+      background-image: url("/img/icon-close.svg");
+      background-position: center;
+      background-repeat: no-repeat;
+      border: none;
+      outline: none;
+    }
+  }
+
+
+  .nav__list {
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  .nav__link {
+    width: 320px;
+    display: block;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 140%;
+    padding: 17px 35px 17px 16px;
+    background-color: @grey-light;
+    position: relative;
+
+    &::after {
+      position: absolute;
+      content: "";
+      top: 17px;
+      right: 16px;
+      width: 25px;
+      height: 25px;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-image: url("/img/icon-arrow-right.svg");
+    }
+  }
+
+  .nav__item {
+    margin-right: 0;
+    margin-top: 30px;
+
+    &:first-of-type {
+      margin-top: 82px;
+    }
+    &:last-of-type {
+      margin-right: 0;
+    }
+  }
+}

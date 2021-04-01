@@ -1,17 +1,17 @@
-.container(@mobile-width) {
+.container(mobile-width) {
   width: @mobile-width;
   padding: 0 16px;
   margin: 0 auto;
 }
 
-.container(@tablet-width) {
+.container(tablet-width) {
   width: @tablet-width;
   padding: 0 21px;
   margin: 0 auto;
 }
 
-.container(@desktop-width) {
-  width: @desktop-width;
-  padding: 0 375px;
+.container(desktop-width) {
+  width: calc( (100vw / @desktop-width) * 100);
+  padding: 0 19.53125%;
   margin: 0 auto;
 }
