@@ -1,0 +1,29 @@
+.phone__link {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  font-family: "Montserrat", "Arial", sans-serif;
+  color: @darkest-blue;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 32px;
+  text-decoration-line: underline;
+  &:hover,
+  &:focus {
+    color: @ginger;
+  }
+}
+
+.phone__icon {
+  fill: none;
+  stroke: @black;
+  margin-right: 6px;
+}
+
+.phone__link:hover .phone__icon,
+.phone__link:focus .phone__icon {
+  fill: none;
+  stroke: @ginger;
+}
