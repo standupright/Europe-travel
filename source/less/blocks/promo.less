@@ -70,8 +70,12 @@
     content: "";
     width: 16px;
     height: 16px;
-    z-index: 2;
     background-image: url("/img/icon-arrow-down.svg");
+  }
+
+  &:hover,
+  &:focus {
+    background-color: @orange;
   }
 }
 
@@ -134,10 +138,10 @@
   .promo {
     background: none;
     position: relative;
-    z-index: 1;
+
 
     &::before {
-      z-index: -1;
+
       position: absolute;
       content: "";
       width: 100%;
@@ -161,6 +165,7 @@
   }
 
   .promo__title {
+    z-index: 1;
     display: block;
     padding-top: 81px;
     padding-bottom: 102px;
