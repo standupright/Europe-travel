@@ -9,10 +9,10 @@
 }
 
 .page-header__nav {
-  margin-left: calc(100% - 530px );
+  margin-left: calc(100% - 530px);
 }
 
-@media (max-width: 1023px) {
+@media (max-width: @tablet-breakpoint) {
   .page-header {
     .container(tablet-width);
     display: flex;
@@ -33,5 +33,11 @@
     height: 17px;
     margin-top: 18px;
     margin-bottom: 14px;
+  }
+}
+
+@media (max-width: 320px) {
+  .page-header {
+    .container(mobile-min-width);
   }
 }
