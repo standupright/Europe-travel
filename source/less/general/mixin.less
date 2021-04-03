@@ -5,19 +5,13 @@
 }
 
 .container(mobile-width) {
-  width: calc( (100vw / @mobile-width) * 100);
-  padding: 0 5%;
-  margin: 0 auto;
+  padding: 0 calc(~"(100% - @{tablet-width} - 16px) / 2");
 }
 
 .container(tablet-width) {
-  width: calc( (100vw / @tablet-width) * 100) ;
-  padding: 0 2.734375%;
-  margin: 0 auto;
+  padding: 0 calc(~"(100% - @{tablet-width} - 80px) / 2");
 }
 
 .container(desktop-width) {
-  width: calc( (100vw / @desktop-width) * 100);
-  padding: 0 19.53125%;
-  margin: 0 auto;
+  padding: 0 calc(~"(100% - @{desktop-width} - 120px) / 2");
 }
