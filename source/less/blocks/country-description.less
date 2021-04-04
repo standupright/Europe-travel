@@ -1,0 +1,78 @@
+.country-description {
+  .container(desktop-width);
+  padding-bottom: 240px;
+}
+
+.country-description__wrapper {
+  padding-left: 60px;
+  padding-right: 60px;
+}
+
+.country-description__inner {
+  padding-top: 80px;
+}
+
+.country-description__countries-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.country-description__country-item {
+  display: none;
+
+  &--active {
+    display: flex;
+    justify-content: flex-start;
+  }
+}
+
+.country-description__detailed-description {
+  width: 40.55%;
+  padding-top: 10px;
+}
+
+.country-description__reviews {
+  width: 60.55%;
+}
+
+@media (max-width: @tablet-breakpoint) {
+  .country-description {
+    padding: 0;
+    padding-bottom: 112px;
+  }
+
+  .country-description__wrapper {
+    padding: 0;
+  }
+
+  .country-description__inner {
+    padding-top: 33px;
+  }
+
+  .country-description__country-item {
+    &--active {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+  }
+
+  .country-description__detailed-description {
+    .container(tablet-width);
+    width: 100%;
+    padding-top: 0px;
+  }
+
+  .country-description__reviews {
+    width: 100%;
+  }
+}
+
+@media (max-width: @tablet-width - 1) {
+  .country-description__detailed-description {
+    .container(mobile-width);
+    width: 100%;
+    padding-top: 0px;
+  }
+}

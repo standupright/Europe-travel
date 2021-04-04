@@ -1,0 +1,109 @@
+.review-description {
+  padding: 30px;
+}
+
+.review-description__title {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 37px;
+  letter-spacing: -0.691667px;
+  position: relative;
+
+  &::after {
+    position: absolute;
+    left: 0;
+    bottom: -11px;
+    content: "";
+    width: 68px;
+    height: 1px;
+    background-color: @ginger;
+  }
+}
+
+.review-description__description {
+  padding: 0;
+  margin: 0;
+  margin-top: 32px;
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-style: normal;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 28px;
+  letter-spacing: -0.408333px;
+}
+
+.review-description__author {
+  margin-top: 35px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.review-description__avatar img {
+  width: 37px;
+  height: 38px;
+}
+
+.review-description__name {
+  margin-left: 15px;
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: -0.466667px;
+  color: @dark-blue;
+}
+
+@media (max-width: @tablet-width - 1) {
+  .review-description {
+    padding: 30px 20px;
+  }
+
+  .review-description {
+    text-align: center;
+  }
+
+  .review-description__title {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+
+    &::after {
+      position: absolute;
+      left: 70px;
+      bottom: -11px;
+      content: "";
+      width: 68px;
+      height: 1px;
+      background-color: @ginger;
+    }
+  }
+
+  .review-description__description {
+    margin-top: 30px;
+  }
+
+  .review-description__author {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .review-description__avatar img {
+    width: 37px;
+    height: 38px;
+  }
+
+  .review-description__name {
+    margin-left: 0;
+    margin-top: 10px;
+  }
+}
