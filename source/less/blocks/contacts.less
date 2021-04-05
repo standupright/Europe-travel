@@ -1,0 +1,78 @@
+.contacts {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.contacts__title {
+  margin: 0;
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 32px;
+  color: @darkest-blue;
+}
+
+.contacts__tel-link {
+  margin-top: 19px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+  text-decoration-line: underline;
+  color: @ginger;
+}
+
+.contacts__email-link {
+  margin-top: 21px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  text-decoration-line: underline;
+  color: @ginger;
+}
+
+.contacts__icon-tel {
+  fill: none;
+  stroke: @grey-additional;
+  margin-right: 11px;
+}
+
+.contacts__icon-email {
+  fill: @grey-additional;
+  margin-right: 15px;
+}
+
+.contacts__tel-link:hover .contacts__icon-tel,
+.contacts__tel-link:focus .contacts__icon-tel {
+  stroke: @ginger;
+}
+
+.contacts__email-link:hover .contacts__icon-email,
+.contacts__email-link:focus .contacts__icon-email {
+  fill: @ginger;
+}
+
+
+@media (max-width: @tablet-breakpoint) {
+  .contacts__email-link {
+    font-size: 0;
+
+    &::after {
+      content: "Почта";
+      visibility: visible;
+      font-size: 14px;
+    }
+  }
+}
+

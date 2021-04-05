@@ -85,7 +85,9 @@
     margin-bottom: 30px;
     margin-left: auto;
     margin-right: auto;
-    padding: 19px 52px;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 19px 10px;
     font-weight: 500;
     font-size: 10px;
     line-height: 12px;
@@ -95,8 +97,8 @@
 
 @media (max-width: @tablet-width - 1) {
   .detailed-description__wrapper {
-    padding-left: 16px;
-    padding-right: 16px;
+    padding-left: 0px;
+    padding-right: 0px;
   }
 
   .detailed-description__button {
@@ -104,3 +106,12 @@
     margin-bottom: 50px;
   }
 }
+
+
+@media (max-width: @mobile-width) {
+  .detailed-description__wrapper {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+

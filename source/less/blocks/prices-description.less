@@ -1,0 +1,76 @@
+.prices-description {
+  padding-left: 6.5%;
+}
+
+.prices-description__title {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 55px;
+  line-height: 90px;
+  position: relative;
+
+  &::after {
+    position: absolute;
+    content: "";
+    bottom: -23px;
+    left: 0;
+    width: 175px;
+    height: 3px;
+    background-color: @ginger;
+  }
+}
+
+.prices-description__description {
+  margin: 0;
+  margin-top: 53px;
+  width: 100%;
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 170%;
+  color: @grey-dark;
+  letter-spacing: -0.466667px;
+}
+
+.prices-description__contact-us {
+  margin-top: 60px;
+}
+
+@media (max-width: @tablet-breakpoint) {
+  .prices-description {
+    padding-left: 0;
+  }
+
+  .prices-description__title {
+    text-align: center;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 150%;
+
+    &::after {
+      display: none;
+    }
+  }
+
+  .prices-description__description {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 16px;
+    line-height: 170%;
+    letter-spacing: normal;
+  }
+
+  .prices-description__contact-us {
+    margin-top: 30px;
+  }
+}
+
+@media (max-width: @tablet-width - 1) {
+  .prices-description__contact-us {
+    margin-top: 20px;
+  }
+}

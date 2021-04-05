@@ -69,14 +69,16 @@
   }
 }
 
-@media (max-width: @tablet-width - 1) {
-  .country-description {
-    padding-bottom: 45px;
-  }
 
+@media (max-width: @tablet-width - 1) {
   .country-description__detailed-description {
-    .container(mobile-width);
+    padding: 0 16px;
     width: 100%;
-    padding-top: 0px;
+  }
+}
+
+@media (max-width: @mobile-width) {
+  .country-description__detailed-description {
+    .container(mobile-min-width);
   }
 }

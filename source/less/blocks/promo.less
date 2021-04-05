@@ -175,10 +175,18 @@
   .promo__description {
     margin-top: 0;
     color: @dark-blue;
-    width: 288px;
+    width: 100%;
   }
 
   .promo__button {
     margin-top: 20px;
+    width: 288px;
   }
 }
+
+@media (max-width: @mobile-width) {
+  .promo__wrapper {
+    .container(mobile-min-width);
+  }
+}
+
