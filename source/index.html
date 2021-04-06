@@ -39,12 +39,12 @@
           <button class="nav__toggle" type="button" aria-label="Открыть меню"></button>
           <ul class="nav__list">
             <li class="nav__item">
-              <a class="nav__link" href="#">
+              <a class="nav__link" href="#places">
                 О путешествии
               </a>
             </li>
             <li class="nav__item">
-              <a class="nav__link" href="#">
+              <a class="nav__link" href="#prices">
                 Цены
               </a>
             </li>
@@ -75,7 +75,7 @@
             новом свете. Вас ждет: море, горы, а также
             потрясающая красота природы.
           </p>
-          <a class="promo__button" href="#">
+          <a class="promo__button" href="#country-description">
             Смотреть тур
           </a>
         </div>
@@ -83,7 +83,7 @@
     </section>
     <section class="places">
       <div class="places__wrapper">
-        <h2 class="places__title">Места посещения</h2>
+        <h2 id="places" class="places__title">Места посещения</h2>
         <p class="places__description">Вы можете выбрать полный тур или частичный, с посещением первых 3 мест</p>
 
       </div>
@@ -91,7 +91,7 @@
         <ul class="places__list">
 
           <li class="places__item places-item">
-            <a class="places-item__button" href="#">Смотреть подробнее</a>
+            <a class="places-item__button" href="#country-description">Смотреть подробнее</a>
             <h2 class="places-item__title">Греция</h2>
 
             <picture class="places-item__picture">
@@ -111,7 +111,7 @@
 
 
           <li class="places__item places-item">
-            <a class="places-item__button" href="#">Смотреть подробнее</a>
+            <a class="places-item__button" href="#country-description">Смотреть подробнее</a>
             <h2 class="places-item__title">Албания</h2>
 
             <picture class="places-item__picture">
@@ -130,7 +130,7 @@
           </li>
 
           <li class="places__item places-item">
-            <a class="places-item__button" href="#">Смотреть подробнее</a>
+            <a class="places-item__button" href="#country-description">Смотреть подробнее</a>
             <h2 class="places-item__title">Македония</h2>
 
             <picture class="places-item__picture">
@@ -149,7 +149,7 @@
           </li>
 
           <li class="places__item places-item">
-            <a class="places-item__button" href="#">Смотреть подробнее</a>
+            <a class="places-item__button" href="#country-description">Смотреть подробнее</a>
             <h2 class="places-item__title">Черногория</h2>
 
             <picture class="places-item__picture">
@@ -192,7 +192,7 @@
 
     </section>
 
-    <section class="country-description">
+    <section id="country-description" class="country-description">
       <h2 class="visually-hidden">Описание стран</h2>
       <div class="country-description__wrapper">
         <header class="country-description__header tabs-header">
@@ -485,7 +485,7 @@
 
     </section>
 
-    <section class="prices">
+    <section id="prices" class="prices">
       <div class="prices__wrapper">
         <div class="prices__description prices-description">
           <h2 class="prices-description__title">Цены</h2>
@@ -582,7 +582,7 @@
         <div class="question__inner">
           <p class="question__mini-title">У Вас остались вопросы?</p>
           <p class="question__description">Оставьте свой номер или e-mail и мы свяжемся с Вами</p>
-          <form method="post" action="#" enctype="multipart/form-data" autocomplete="off">
+          <form class="question__form" method="post" action="#" enctype="multipart/form-data" autocomplete="off">
             <div class="question__inputs-inner">
               <input required class="question__tel" type="tel" name="tel" id="tel" minlenght="12" maxlength="12"
                 placeholder="+7 Введите 10 цифр номера">

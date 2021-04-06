@@ -20,7 +20,7 @@ const slides = document.querySelectorAll('.country-description__country-item');
 
 const addSliderClickHandler = function (button, slide) {
   button.addEventListener("click", function () {
-    for (var i = 0; i < tabs.length; i++) {
+    for (let i = 0; i < tabs.length; i++) {
       tabs[i].classList.remove("tabs-header__tab--active");
       slides[i].classList.remove("country-description__country-item--active");
     }
@@ -29,8 +29,26 @@ const addSliderClickHandler = function (button, slide) {
   });
 };
 
-for (var i = 0; i < tabs.length; i++) {
+for (let i = 0; i < tabs.length; i++) {
   addSliderClickHandler(tabs[i], slides[i]);
+}
+
+// Переключение табов по нажатию на кнопку "смотреть подробнее"
+const placesButtons = document.querySelectorAll('.places-item__button');
+
+const onPlacesButtonsClick = function (buttonPlace,buttonTab, slide) {
+  buttonPlace.addEventListener("click", function () {
+    for (let i = 0; i < tabs.length; i++) {
+      tabs[i].classList.remove("tabs-header__tab--active");
+      slides[i].classList.remove("country-description__country-item--active");
+    }
+    slide.classList.add("country-description__country-item--active");
+    buttonTab.classList.add("tabs-header__tab--active");
+  });
+};
+
+for (let i = 0; i < tabs.length; i++) {
+  onPlacesButtonsClick(placesButtons[i],tabs[i], slides[i]);
 }
 
 
@@ -108,12 +126,14 @@ const isEscKeydown = function (evt) {
     evt.preventDefault();
     closeModal();
     removePopupListeners();
+    removeQuestionListeners();
   }
 }
 
 const onOverlayClick = () => {
   closeModal();
   removePopupListeners();
+  removeQuestionListeners();
 }
 
 const onPopupCloseClick = function (evt) {
@@ -126,6 +146,7 @@ const onSuccessAlertCloseClick = function (evt) {
   evt.preventDefault();
   closeModal();
   removePopupListeners();
+  removeQuestionListeners();
 }
 
 
@@ -153,7 +174,7 @@ for (let i = 0; i < buttonsBuyTour.length; i++) {
   buttonsBuyTour[i].addEventListener("click", onButtonTourClick)
 }
 
-// Событие отправки формы
+// Событие отправки формы Popup
 popupForm.addEventListener("submit", (evt) => {
   evt.preventDefault();
   successAlert.classList.add('modal-show');
@@ -163,3 +184,45 @@ popupForm.addEventListener("submit", (evt) => {
     localStorage.setItem("email", poupEmail.value);
   }
 });
+
+// Форма в блоке question
+const questionForm = document.querySelector('.question__form');
+
+const addQustionListeners = () => {
+  document.addEventListener("keydown", isEscKeydown);
+  successAlertClose.addEventListener("click", onSuccessAlertCloseClick);
+  overlay.addEventListener('click', onOverlayClick);
+}
+
+const removeQuestionListeners = () => {
+  document.removeEventListener("keydown", isEscKeydown);
+  successAlertClose.removeEventListener("click", onSuccessAlertCloseClick);
+  overlay.removeEventListener('click', onOverlayClick);
+}
+
+// Событие отправки формы
+questionForm.addEventListener("submit", (evt) => {
+  evt.preventDefault();
+  overlay.classList.add('modal-show');
+  successAlert.classList.add('modal-show');
+  addQustionListeners();
+
+  if (isStorageSupport) {
+    localStorage.setItem("name", popupTel.value);
+    localStorage.setItem("email", poupEmail.value);
+  }
+});
+
+// Плавный скролл
+const smoothLinks = document.querySelectorAll('a[href^="#"]');
+for (let smoothLink of smoothLinks) {
+    smoothLink.addEventListener('click', function (e) {
+        e.preventDefault();
+        const id = smoothLink.getAttribute('href');
+
+        document.querySelector(id).scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+        });
+    });
+};
