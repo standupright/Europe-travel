@@ -226,3 +226,30 @@ for (let smoothLink of smoothLinks) {
         });
     });
 };
+
+// Swiper
+
+const swiper = new Swiper('.swiper-container', {
+  // Optional parameters
+  direction: 'horizontal',
+  loop: false,
+  simulateTouch: false,
+  // Default parameters
+  slidesPerView: 5,
+  centeredSlides: false,
+  spaceBetween: 0,
+  breakpoints: {
+    320: {
+      slidesPerView: 2,
+      spaceBetween: 0,
+    },
+    768: {
+      slidesPerView: 4,
+      spaceBetween: 0,
+    },
+    1024: {
+      slidesPerView: 5,
+      spaceBetween: 0,
+    }
+  },
+});

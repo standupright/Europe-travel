@@ -1,11 +1,12 @@
+.tabs-header {
+  width: 900px;
+}
+
 .tabs-header__list {
   width: 100%;
   margin: 0;
   padding: 0;
   list-style: none;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
   padding-bottom: 15px;
   position: relative;
 
@@ -13,7 +14,7 @@
     position: absolute;
     bottom: 0;
     content: "";
-    width: 900px;
+    width: 90%;
     height: 2px;
     background-color: @dark-blue;
     opacity: 0.3;
@@ -21,7 +22,8 @@
 }
 
 .tabs-header__item {
-  margin-right: 8.47%;
+  //margin-right: 8.47%;
+
 
   &:last-of-type {
     margin-right: 0;
@@ -57,7 +59,6 @@
 
 @media (max-width: @tablet-breakpoint) {
   .tabs-header {
-    padding: 0 20px;
     width: 100%;
     height: 40px;
     overflow: hidden;
@@ -65,22 +66,17 @@
   }
 
   .tabs-header__list {
+    padding-left: 20px;
+    padding-right: 20px;
     overflow: visible;
     position: absolute;
     top: 0;
     left: 0;
-    width: 180%;
-
-    padding-left: 20px;
-    padding-right: 20px;
+    width: 900px;
 
     &::after {
-      width: 180%;
+      width: 110%;
     }
-  }
-
-  .tabs-header__item {
-    margin-right: 9.8%;
   }
 }
 
@@ -88,9 +84,13 @@
   .tabs-header__list {
     padding-left: 16px;
     padding-right: 16px;
+
+    &::after {
+      width: 240%;
+    }
   }
 
   .tabs-header__item {
-    margin-right: 25.5%;
+    margin-right: 20px;
   }
 }

@@ -6,6 +6,8 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Путешествие по Европе</title>
   <link rel="stylesheet" href="css/style.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
   <link rel="preload" href="fonts/montserrat-bold.woff2" as="font">
   <link rel="preload" href="fonts/montserrat-medium.woff2" as="font">
   <link rel="preload" href="fonts/montserrat-regular.woff2" as="font">
@@ -30,7 +32,8 @@
 
       <div class="page-header__logo-wrapper">
         <a>
-          <img class="page-header__logo" src="img/main-logo.svg" alt="Логотип Cat Energy" width="57" height="22">
+          <img class="page-header__logo" src="img/main-logo.svg" alt="Логотип 'Путешествие по Европе'" width="57"
+            height="22">
         </a>
       </div>
 
@@ -194,23 +197,25 @@
       <h2 class="visually-hidden">Описание стран</h2>
       <div class="country-description__wrapper">
         <header class="country-description__header tabs-header">
-          <ul class="tabs-header__list">
-            <li class="tabs-header__item">
-              <button class="tabs-header__tab tabs-header__tab--active">Греция</button>
-            </li>
-            <li class="tabs-header__item">
-              <button class="tabs-header__tab">Албания</button>
-            </li>
-            <li class="tabs-header__item">
-              <button class="tabs-header__tab">Македония</button>
-            </li>
-            <li class="tabs-header__item">
-              <button class="tabs-header__tab">Черногория</button>
-            </li>
-            <li class="tabs-header__item">
-              <button class="tabs-header__tab">Хорватия</button>
-            </li>
-          </ul>
+          <div class="swiper-container">
+            <div class="swiper-wrapper tabs-header__list">
+              <div class="swiper-slide tabs-header__item">
+                <button class="tabs-header__tab tabs-header__tab--active">Греция</button>
+              </div>
+              <div class="swiper-slide tabs-header__item">
+                <button class="tabs-header__tab">Албания</button>
+              </div>
+              <div class="swiper-slide tabs-header__item">
+                <button class="tabs-header__tab">Македония</button>
+              </div>
+              <div class="swiper-slide tabs-header__item">
+                <button class="tabs-header__tab">Черногория</button>
+              </div>
+              <div class="swiper-slide tabs-header__item">
+                <button class="tabs-header__tab">Хорватия</button>
+              </div>
+            </div>
+          </div>
         </header>
 
         <div class="country-description__inner">
@@ -219,7 +224,7 @@
             <li class="country-description__country-item country-description__country-item--active">
               <div class="country-description__detailed-description detailed-description">
                 <div class="detailed-description__wrapper">
-                  <h2 class="detailed-description__title">Греция</h2>
+                  <h3 class="detailed-description__title">Греция</h3>
                   <p class="detailed-description__description">На севере Греции находится один из
                     крупнейших комплексов монастырей, расположенных на вершинах скал. Название
                     его «Метеора» буквально переводится как
@@ -277,7 +282,7 @@
             <li class="country-description__country-item">
               <div class="country-description__detailed-description detailed-description">
                 <div class="detailed-description__wrapper">
-                  <h2 class="detailed-description__title">Албания</h2>
+                  <h3 class="detailed-description__title">Албания</h3>
                   <p class="detailed-description__description">
                     В Албании мы посетим Курорт Ксамиль. Этот
                     курорт поразит вас чистейшей водой и
@@ -329,7 +334,7 @@
             <li class="country-description__country-item">
               <div class="country-description__detailed-description detailed-description">
                 <div class="detailed-description__wrapper">
-                  <h2 class="detailed-description__title">Македония</h2>
+                  <h3 class="detailed-description__title">Македония</h3>
                   <p class="detailed-description__description">
                     В Македонии нашей целью будет посетить Палаошник,
                     который расположился в удивительно красивой лесистой местности
@@ -380,7 +385,7 @@
             <li class="country-description__country-item">
               <div class="country-description__detailed-description detailed-description">
                 <div class="detailed-description__wrapper">
-                  <h2 class="detailed-description__title">Черногория</h2>
+                  <h3 class="detailed-description__title">Черногория</h3>
                   <p class="detailed-description__description">
                     Черногория удивит нас самым большим в Европе каньоном реки Тара,
                     который в некоторых местах высотой берегов доходит до 1300 метров,
@@ -428,7 +433,7 @@
             <li class="country-description__country-item">
               <div class="country-description__detailed-description detailed-description">
                 <div class="detailed-description__wrapper">
-                  <h2 class="detailed-description__title">Хорватия</h2>
+                  <h3 class="detailed-description__title">Хорватия</h3>
                   <p class="detailed-description__description">
                     В Хорватии мы посетим необычайную пещеру названную Бередине.
                     Ее подземный мир увлечет вас на 80-ти метровую глубину через 5 освещенных залов,
@@ -582,13 +587,13 @@
           <p class="question__description">Оставьте свой номер или e-mail и мы свяжемся с Вами</p>
           <form class="question__form" method="post" action="#" enctype="multipart/form-data" autocomplete="off">
             <div class="question__inputs-inner">
-              <input required class="question__tel" type="tel" name="tel" id="tel" minlenght="12" maxlength="12"
+              <input required class="question__tel" type="tel" name="tel-footer" id="tel-footer"
                 placeholder="+7 Введите 10 цифр номера">
               <span class="question__inputs__validation-tel">Данные не верны</span>
-              <input minlenght="5" class="question__email" type="email" name="email" id="email" placeholder="E-mail">
+              <input class="question__email" type="email" name="email" id="email" placeholder="E-mail">
               <span class="question__inputs__validation-email">Данные не верны</span>
             </div>
-            <button id="submit-form" class="question__button" type="submit">Отправить</button>
+            <button class="question__button" type="submit">Отправить</button>
           </form>
         </div>
       </div>
@@ -630,8 +635,8 @@
           <h3 class="contacts__title">Наши контакты</h3>
           <a class="contacts__email-link" href="email:puteshestviemechta@gmail.ru">
             <svg class="contacts__icon-email" width="26" height="20" xmlns="http://www.w3.org/2000/svg"
-              aria-labelledby="email">
-              <title id="email">Наша почта</title>
+              aria-labelledby="email-footer">
+              <title id="email-footer">Наша почта</title>
               <use xlink:href="#icon-email"></use>
             </svg>
             puteshestviemechta@gmail.ru
@@ -660,7 +665,7 @@
   <div class="popup">
     <picture class="popup__picture">
       <source type="image/webp" srcset="img/popup-sea.webp 1x, img/popup-sea@2x.webp 2x">
-      <img src="img/popup-sea.jpg" alt="Пейзаж Греции" srcset="img/popup-sea@2x.jpg 2x" width="338" height="444">
+      <img src="img/popup-sea.jpg" alt="Пейзаж моря" srcset="img/popup-sea@2x.jpg 2x" width="338" height="444">
     </picture>
 
     <div class="popup__wrapper">
@@ -668,24 +673,26 @@
       <button class="popup__close"></button>
       <form class="popup__form" method="post" action="#" enctype="multipart/form-data" autocomplete="off">
         <div class="popup__inputs-inner">
-          <input required class="popup__tel" type="tel" name="tel" id="tel" minlenght="12" maxlength="12"
+          <input required class="popup__tel" type="tel" name="tel-popup" id="tel-popup"
             placeholder="+7 Введите 10 цифр номера">
           <span class="popup__inputs__validation-tel">Данные не верны</span>
-          <input minlenght="5" class="popup__email" type="email" name="email" id="email" placeholder="E-mail">
+          <input class="popup__email" type="email" name="email-popup" id="email-popup" placeholder="E-mail">
           <span class="popup__inputs__validation-email">Данные не верны</span>
         </div>
-        <button id="submit-form" class="popup__button" type="submit">Отправить</button>
+        <button class="popup__button" type="submit">Отправить</button>
       </form>
     </div>
   </div>
 
   <div class="success-alert">
-      <button class="success-alert__close"></button>
-      <p class="success-alert__message">Форма успешно отправлена, спасибо! :)</p>
+    <button class="success-alert__close"></button>
+    <p class="success-alert__message">Форма успешно отправлена, спасибо! :)</p>
   </div>
 
   <div class="overlay"></div>
 
+  <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <script src="js/scripts.min.js"></script>
 </body>
 
