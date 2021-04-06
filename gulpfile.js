@@ -12,6 +12,7 @@ const imagemin = require("gulp-imagemin");
 const sync = require("browser-sync").create();
 const webp = require("gulp-webp");
 const del = require("del");
+const concat = require('gulp-concat');
 // Styles
 
 const styles = () => {
@@ -41,9 +42,9 @@ const html = () => {
 
 // Scripts
 const scripts = () => {
-  return gulp.src("source/js/scripts.js")
+  return gulp.src("source/js/*.js")
     .pipe(uglify())
-    .pipe(rename("scripts.min.js"))
+    .pipe(concat('scripts.min.js'))
     .pipe(gulp.dest("build/js"))
     .pipe(sync.stream());
 }
