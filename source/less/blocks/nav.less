@@ -38,7 +38,7 @@
     height: 568px;
     background-color: @white;
     position: absolute;
-    top: 0px;
+    top: 0;
     right: 0;
     display: flex;
     flex-direction: column;
@@ -54,7 +54,7 @@
       width: 50px;
     }
 
-    &--closed .nav__list{
+    &--closed .nav__list {
       display: none;
     }
 
@@ -70,7 +70,7 @@
       height: 50px;
     }
 
-    &--opened .nav__toggle{
+    &--opened .nav__toggle {
       display: block;
       margin-top: 20px;
       margin-right: 20px;
@@ -121,6 +121,7 @@
     &:first-of-type {
       margin-top: 82px;
     }
+
     &:last-of-type {
       margin-right: 0;
     }

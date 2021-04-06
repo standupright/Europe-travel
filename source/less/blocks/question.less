@@ -51,6 +51,20 @@
   justify-content: space-between;
   margin-top: 18px;
   width: 100%;
+  position: relative;
+
+  &::after {
+    content: "*";
+    position: absolute;
+    font-family: "Montserrat", "Arial", sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 21px;
+    color: @ginger;
+    top: 6px;
+    left: 15px;
+  }
 }
 
 .question__tel {
@@ -103,23 +117,6 @@
   }
 }
 
-.question__inputs-inner {
-  position: relative;
-
-  &::after {
-    content: "*";
-    position: absolute;
-    font-family: "Montserrat", "Arial", sans-serif;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 17px;
-    line-height: 21px;
-    color: @ginger;
-    top: 6px;
-    left: 15px;
-  }
-}
-
 // validation
 .question__inputs__validation-tel {
   text-align: left;
@@ -136,7 +133,7 @@
   color: @ginger;
 }
 
-.question__inputs__validation-email  {
+.question__inputs__validation-email {
   text-align: left;
   width: 47.2%;
   display: none;
@@ -268,7 +265,7 @@
     width: 288px;
   }
 
-  .question__inputs__validation-email  {
+  .question__inputs__validation-email {
     width: 47.2%;
     top: 58px;
     left: 0;

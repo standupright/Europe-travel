@@ -15,8 +15,8 @@
 }
 
 .popup.modal-show {
-   opacity: 1;
-   visibility: visible;
+  opacity: 1;
+  visibility: visible;
 }
 
 .popup__picture {
@@ -64,6 +64,20 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  position: relative;
+
+  &::after {
+    content: "*";
+    position: absolute;
+    font-family: "Montserrat", "Arial", sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 21px;
+    color: @ginger;
+    top: 6px;
+    left: 15px;
+  }
 }
 
 .popup__tel {
@@ -118,23 +132,6 @@
   }
 }
 
-.popup__inputs-inner {
-  position: relative;
-
-  &::after {
-    content: "*";
-    position: absolute;
-    font-family: "Montserrat", "Arial", sans-serif;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 17px;
-    line-height: 21px;
-    color: @ginger;
-    top: 6px;
-    left: 15px;
-  }
-}
-
 // validation
 .popup__inputs__validation-tel {
   text-align: left;
@@ -151,7 +148,7 @@
   color: @ginger;
 }
 
-.popup__inputs__validation-email  {
+.popup__inputs__validation-email {
   text-align: left;
   width: 99%;
   display: none;
@@ -170,7 +167,6 @@
 .popup__email:invalid + .popup__inputs__validation-email {
   display: block;
 }
-
 
 .popup__button {
   display: block;
