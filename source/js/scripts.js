@@ -3,6 +3,7 @@ const navToggle = document.querySelector('.nav__toggle');
 
 // nav open and closed
 nav.classList.remove('nav--nojs');
+nav.classList.add('nav--closed');
 
 navToggle.addEventListener('click', function () {
   if (nav.classList.contains('nav--closed')) {

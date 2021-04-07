@@ -1,6 +1,6 @@
 .country-description {
   .container(desktop-width);
-  padding-bottom: 240px;
+  padding-bottom: 232px;
 }
 
 .country-description__wrapper {
@@ -71,8 +71,15 @@
 
 
 @media (max-width: @tablet-width - 1) {
+  .country-description {
+    padding-bottom: 45px;
+  }
+
   .country-description__detailed-description {
-    padding: 0 16px;
     width: 100%;
+  }
+
+  .country-description__inner {
+    padding-top: 23px;
   }
 }

@@ -1,5 +1,5 @@
 .prices-description {
-  padding-left: 6.5%;
+  padding-left: 9.5%;
 }
 
 .prices-description__title {
@@ -15,7 +15,7 @@
   &::after {
     position: absolute;
     content: "";
-    bottom: -23px;
+    bottom: -18px;
     left: 0;
     width: 175px;
     height: 3px;
@@ -25,7 +25,7 @@
 
 .prices-description__description {
   margin: 0;
-  margin-top: 53px;
+  margin-top: 50px;
   width: 100%;
   font-family: "Montserrat", "Arial", sans-serif;
   font-style: normal;
@@ -37,7 +37,7 @@
 }
 
 .prices-description__contact-us {
-  margin-top: 60px;
+  margin-top: 35px;
 }
 
 @media (max-width: @tablet-breakpoint) {
@@ -47,6 +47,7 @@
   }
 
   .prices-description__title {
+    margin: 0;
     text-align: center;
     font-weight: 600;
     font-size: 30px;
@@ -71,6 +72,11 @@
 }
 
 @media (max-width: @tablet-width - 1) {
+  .prices-description__title {
+    font-size: 24px;
+line-height: 150%;
+  }
+
   .prices-description__contact-us {
     margin-top: 20px;
   }

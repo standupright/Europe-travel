@@ -24,6 +24,7 @@
 }
 
 .next-travels__item {
+  margin-bottom: 10px;
   font-family: "Montserrat", "Arial", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -31,4 +32,19 @@
   line-height: 17px;
   color: @darkest-blue;
   opacity: 0.5;
+}
+
+@media (max-width: @tablet-width - 1) {
+  .next-travels__inner-lists {
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .next-travels__list {
+    &:nth-of-type(1) {
+      margin-right: 92px;
+      margin-bottom: 12px;
+    }
+  }
 }

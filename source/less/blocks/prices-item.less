@@ -1,5 +1,5 @@
 .prices-item {
-  padding: 39px 30px 30px 30px;
+  padding: 39px 30px 20px 30px;
   border: 3px solid @grey-lighten;
   border-radius: 6px;
   position: relative;
@@ -46,8 +46,9 @@
 }
 
 .prices-item__description {
+  margin: 0;
   padding: 0;
-  margin-top: 40px;
+  margin-top: 15px;
   font-family: "Montserrat", "Arial", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -81,6 +82,7 @@
 .prices-item__item {
   width: 92.1%;
   position: relative;
+  margin-bottom: 15px;
 
   &::before {
     position: absolute;
@@ -103,6 +105,7 @@
 }
 
 .prices-item__advantages {
+  margin: 0;
   font-family: "Montserrat", "Arial", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -113,11 +116,11 @@
 
 .prices-item__button {
   position: absolute;
-  bottom: 31px;
+  bottom: 40px;
   display: block;
   text-align: center;
   text-transform: uppercase;
-  width: 83%;
+  width: 288px;
   font-family: "Montserrat", "Arial", sans-serif;
   font-style: normal;
   font-weight: 700;
@@ -136,7 +139,7 @@
 
 @media (max-width: @tablet-breakpoint) {
   .prices-item {
-    padding: 30px 20px;
+    padding: 30px 20px 0 20px;
   }
 
   .prices-item__inner {
@@ -173,18 +176,24 @@
   .prices-item__list {
     margin: 0;
     margin-top: 31px;
-    padding-left: 26px;
-    padding-bottom: 65px;
+    padding-left: 10px;
+    padding-bottom: 107px;
   }
 
   .prices-item__item {
     width: 98%;
+    margin-bottom: 10px;
   }
 
   .prices-item__button {
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 12px;
+    letter-spacing: 2px;
     bottom: -0.5%;
     left: -0.5%;
-    width: 101%;
+    width: 288px;
+    padding: 20px;
   }
 }
 
@@ -196,12 +205,17 @@
   .prices-item__description {
     padding-left: 20px;
     padding-right: 20px;
+    margin-top: 8px;
   }
 
   .prices-item__list {
     padding-left: 40px;
     padding-right: 0;
-    padding-bottom: 30px;
+    padding-bottom: 55px;
+  }
+
+  .prices-item__item {
+    margin-bottom: 7px;
   }
 
   .prices-item__button {
